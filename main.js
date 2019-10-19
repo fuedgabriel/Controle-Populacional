@@ -8,18 +8,21 @@ $.ajax({
     atributos = atributos['attributes']
     
     var Domicilio = atributos['Domicilio'];
-    var Mulheres = atributos['FEMALES_CY'];
-    var Homens = atributos['MALES_CY'];
-    var População = atributos['Populacao'];
+    var Mulheres = Number(atributos['FEMALES_CY']);
+    var Homens =  Number(atributos['MALES_CY']) ;
     var Area_Local = atributos['Shape__Area'];
-    
+    var totalpop = Mulheres+Homens;
+    var pctF= (Mulheres/totalpop)*100;
+    var pctm= (Homens/totalpop)*100;
 
     document.write('<p>Domicílios : '+ Domicilio + "</p>");
     document.write('<p>Mulheres : '+ Mulheres + "</p>");
     document.write('<p>Homens : '+ Homens + "</p>");
-    document.write('<p>População : '+ População + "</p>");
-    document.write('<p>Area Local : '+ Area_Local + "</p>");
-
+    document.write('<p>Area local : '+ Area_Local.toFixed(0) + " M³</p>");
+    document.write('<p>Estatistica de população</p>');
+    document.write('<p>Mulheres : '+ pctF.toFixed(0) + "%</p>");
+    document.write('<p>Homens : '+ pctm.toFixed(0) + "%</p>");
+    document.write('<p>População : '+ totalpop + "</p>");
     
 
   }
