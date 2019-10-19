@@ -14,8 +14,8 @@ $.ajax({
     var Area_Local = atributos['Shape__Area'];
     
 
-    document.writeln('<p>Domicílios : '+ Domicilio + "</p>");
-    document.writeln('<p>Mulheres : '+ Mulheres + "</p>");
+    document.write('<p>Domicílios : '+ Domicilio + "</p>");
+    document.write('<p>Mulheres : '+ Mulheres + "</p>");
     document.write('<p>Homens : '+ Homens + "</p>");
     document.write('<p>População : '+ População + "</p>");
     document.write('<p>Area Local : '+ Area_Local + "</p>");
